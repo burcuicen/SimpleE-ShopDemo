@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+
+    <img class="header" src="header.png">
+
+    <div class="heading-1">
+        <h1 class="bluee single-underline animated-width rounded">Shop Now!</h1>
+
+    </div>
+
+
+
+
+    <div class="content">
+        <div id="alerts"></div>
+
+        <div class="row">
+            <div class="productcont">
+                <div class="product col-sm-4">
+                    <img class="productImg" src="products/product-1.jpg">
+                    <h3 class="productname"> 14K White Gold Handmade Station Necklace </h3>
+                    <p>14K white gold station necklace with round c.z.'s. This handmade necklace features the classic
+                        design
+                        with sparkly cubic zirconia which are hand set into 14K gold bezels</p>
+                    <p class="price">$209.99</p>
+                    <button class="addtocart">Add To Cart</button>
+                </div>
+                <div class="product col-sm-4">
+                    <img class="productImg" src="products/product-2.jpg">
+                    <h3 class="productname"> Aquamarine Choker Necklace</h3>
+                    <p>This necklace features a single small, light blue aquamarine bead securely wired to a short,
+                        delicate
+                        sterling silver chain. Aquamarine is March's birthstone.</p>
+                    <p class="price">$24.95</p>
+                    <button class="addtocart">Add To Cart</button>
+                </div>
+                <div class="product col-sm-4">
+                    <img class="productImg" src="products/product-3.jpg">
+                    <h3 class="productname"> Aries Handmade Zodiac Necklace </h3>
+                    <p>This necklace features a small 14 karat rose gold-filled disc hand-stamped with an Aries symbol.
+                        Aries is the zodiac sign for March 22 to April 20 birthdays.</p>
+                    <p class="price">$39.95</p>
+                    <button class="addtocart">Add To Cart</button>
+                </div>
+
+            </div>
+
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="productcont">
+                <div class="product col-sm-4">
+                    <img class="productImg" src="products/product-4.jpg">
+                    <h3 class="productname"> Flowers Tagua Necklace</h3>
+                    <p>Three Tagua flowers in orange, yellow and turquoise, are linked together in a beautiful steel
+                        chain
+                        that measures 25” from tip to tip. 3 single Tagua seed </p>
+                    <p class="price">$34.00 </p>
+                    <button class="addtocart">Add To Cart</button>
+                </div>
+                <div class="product col-sm-4">
+                    <img class="productImg" src="products/product-5.jpg">
+                    <h3 class="productname"> Ruby Choker Necklace </h3>
+                    <p>This necklace features a single small, dark red garnet gemstone bead securely wire wrapped to a
+                        short, delicate rose gold filled chain. Garnet is January’s birthstone. </p>
+                    <p class="price">$24.95</p>
+                    <button class="addtocart">Add To Cart</button>
+                </div>
+                <div class="product col-sm-4">
+                    <img class="productImg" src="products/product-6.jpg">
+                    <h3 class="productname"> Silver Birthstone Necklace </h3>
+                    <p>This necklace features a single small, light blue aquamarine bead securely wired to a short,
+                        delicate
+                        sterling silver chain. Aquamarine is March's birthstone.</p>
+                    <p class="price">$22.95</p>
+                    <button class="addtocart">Add To Cart</button>
+                </div>
+
+            </div>
+
+            <div class="cart">
+                <div class="cart-container">
+                    <h2>Cart</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th><strong>Product</strong></th>
+                                <th><strong>Price</strong></th>
+                            </tr>
+                        </thead>
+                        <tbody id="carttable">
+                        </tbody>
+                    </table>
+                    <hr>
+                    <table id="carttotals">
+                        <tr>
+                            <td><strong>Items</strong></td>
+                            <td><strong>Total</strong></td>
+                        </tr>
+                        <tr>
+                            <td>x <span id="itemsquantity">0</span></td>
+
+                            <td>$<span id="total">0</span></td>
+                        </tr>
+                    </table>
+
+
+                    <div class="cart-buttons">
+                        <button id="emptycart">Empty Cart</button>
+                        <button id="checkout">Checkout</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" id="checkoutWindow">
+            <div class="py-5 text-center">
+                <h2>Thanks for your purchase</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-4 order-md-2 mb-4">
+                    <h4 class="d-flex justify-content-between align-items-center mb-3">
+
+                        <span class="badge badge-secondary badge-pill">3</span>
+                    </h4>
+                    <h2>Cart</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th><strong>Product</strong></th>
+                                <th><strong>Price</strong></th>
+                            </tr>
+                        </thead>
+                        <tbody id="cart_payment">
+                        </tbody>
+                    </table>
+                    <hr>
+                    <li class="list-group-item d-flex justify-content-between">
+                        <span>Total (USD)</span>
+                        <strong id="paymentTotal">$20</strong>
+                    </li>
+                    </ul>
+
+
+                </div>
+
+                <div class="col-md-8 order-md-1">
+                    <h4 class="mb-3">Billing address</h4>
+                    <form class="needs-validation" novalidate>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="firstName">First name</label>
+                                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                                <div class="invalid-feedback">
+                                    Valid first name is required.
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="lastName">Last name</label>
+                                <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                                <div class="invalid-feedback">
+                                    Valid last name is required.
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="mb-3">
+                            <label for="email">Email <span class="text-muted">(Optional)</span></label>
+                            <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                            <div class="invalid-feedback">
+                                Please enter a valid email address for shipping updates.
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="address">Address</label>
+                            <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+                            <div class="invalid-feedback">
+                                Please enter your shipping address.
+                            </div>
+                        </div>
+
+
+
+                        <div class="row">
+                            <div class="col-md-5 mb-3">
+                                <label for="country">Country</label>
+                                <select class="custom-select d-block w-100" id="country" required>
+                                    <option value="">Choose...</option>
+                                    <option>Türkiye</option>
+
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select a valid country.
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="state">State</label>
+                                <select class="custom-select d-block w-100" id="state" required>
+                                    <option value="">Choose...</option>
+                                    <option>İzmir</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please provide a valid state.
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="zip">Zip</label>
+                                <input type="text" class="form-control" id="zip" placeholder="" required>
+                                <div class="invalid-feedback">
+                                    Zip code required.
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="mb-4">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="same-address">
+                            <label class="custom-control-label" for="same-address">Shipping address is the same as my
+                                billing address</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="save-info">
+                            <label class="custom-control-label" for="save-info">Save this information for next
+                                time</label>
+                        </div>
+
+                        <hr class="mb-4">
+
+
+                        <h4 class="mb-3">Payment</h4>
+
+
+                        <div class="d-block my-3">
+                            <div class="custom-control custom-radio">
+                                <input id="credit" name="paymentMethod" type="radio" class="custom-control-input"
+                                    required>
+                                <label class="custom-control-label" for="credit">Credit card</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input id="wire-transfer" name="paymentMethod" type="radio" class="custom-control-input"
+                                    required>
+                                <label class="custom-control-label" for="wire-transfer">Wire Transfer</label>
+                            </div>
+                            <br>
+                            <button id="continue" type="submit">Continue to
+                                checkout</button>
+
+
+                        </div>
+                        <div id="credit-cart-pay">
+                            <hr class="mb-4">
+                    </form>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="cc-name">Name on card</label>
+                            <input type="text" id="cc-name" placeholder="" required>
+                            <small class="text-muted">Full name as displayed on card</small>
+
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="cc-number">Credit card number</label>
+                            <input type="text" id="cc-number" placeholder="" required>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="cc-expiration">Expiration</label>
+                            <input type="text" id="cc-expiration" placeholder="" required>
+
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="cc-expiration">CVV</label>
+                            <input type="text" id="cc-cvv" placeholder="" required>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 mb-3">
+                                <button type="submit" id="credit-checkout">Finish
+                                    Checkout</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div id="wire-transfer-pay">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label for="bank-name">Bank Name</label>
+                    <input type="text" class="form-control" id="bank-name" placeholder="" required>
+                    <small class="text-muted">Bank Name</small>
+                    <div class="invalid-feedback">
+                        Bank name is required
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="account-number">Account Number</label>
+                    <input type="text" class="form-control" id="account-number" placeholder="" required>
+                    <small class="text-muted">Account Number</small>
+
+                    <div class="invalid-feedback">
+                        Account Number is required
+                    </div>
+
+
+                </div>
+                <div class="row">
+                    <div class="col-md-8 mb-3">
+                        <button type="submit" id="credit-checkout">Finish
+                            Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- Bootstrap core JavaScript
+          ================================================== -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <script>
+            // JavaScript for disabling form submissions if there are invalid fields
+            (function () {
+                'use strict';
+
+                window.addEventListener('load', function () {
+
+                    var forms = document.getElementsByClassName('needs-validation');
+
+
+                    var validation = Array.prototype.filter.call(forms, function (form) {
+                        form.addEventListener('submit', function (event) {
+                            if (form.checkValidity() === false) {
+                                event.preventDefault();
+                                event.stopPropagation();
+                            }
+                            form.classList.add('was-validated');
+                        }, false);
+                    });
+                }, false);
+            })();
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
