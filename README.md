@@ -1,5 +1,4 @@
 # Simple E-Shop Demo
-build with HTML, CSS, Javascript, Bootsrap, JQuery
 <img width="1425" alt="image" src="https://github.com/burcuicen/SimpleE-ShopDemo/assets/45922116/b5364494-f9e2-47de-81b3-6f6dfedf2c84">
 
 Welcome to the Simple E-Commerce App! This is a basic e-commerce application that allows users to browse products, add them to a cart, and proceed to checkout by entering order details and payment information. The app is built using HTML, JavaScript, and CSS.
